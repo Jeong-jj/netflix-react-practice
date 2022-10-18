@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // Router DOM을 사용하기 위해 BrowserRouter로 감싸줌
-  <BrowserRouter >
+  <BrowserRouter basename='react-netflix-clone' >
     <App />
   </BrowserRouter>
 );
