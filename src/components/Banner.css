@@ -108,3 +108,21 @@
 .space {
   margin-left: 4px;
 }
+
+/* 새로 추가 */
+.videoComeback {
+  position: absolute;
+  bottom: 60px; right: 40px;
+
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background-color: #000 ;
+  
+  z-index: 99;
+  cursor: pointer;
+}

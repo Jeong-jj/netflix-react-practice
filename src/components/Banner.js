@@ -76,6 +76,13 @@ export default function Banner() {
     return (
       <Container>
         <HomeContainer>
+          <button
+            className="videoComeback"
+            onClick={() => setIsClicked(false)}
+          >
+            Back
+          </button>
+
           <Iframe
             width="640"
             height="360"
@@ -120,4 +127,7 @@ const Container = styled.div`
 const HomeContainer = styled.div`
   width: 100%;
   height: 100%;
+
+  // 새로 추가
+  position: relative;
 `;
