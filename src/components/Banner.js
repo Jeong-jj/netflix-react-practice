@@ -36,7 +36,16 @@ export default function Banner() {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   };
 
-  // console.log('movie',movie);  // 확인용
+  // video 유무에 따라 play버튼 결과 달리 보이기
+  const checkVideo = () => {
+    if (movie.videos.results.length === 0) {
+      alert("예고편이 존재하지 않습니다.")
+    } else {
+      setIsClicked(true)
+    }
+  }
+
+  console.log('movie',movie);  // 확인용
 
   if (!isClicked) {
     return (
@@ -56,7 +65,7 @@ export default function Banner() {
           <div className="banner__buttons">
             <button
               className="banner__button play"
-              onClick={() => setIsClicked(true)}
+              onClick={() => checkVideo()}
             >
               <FontAwesomeIcon icon={faPlay} className='fontIcon' /> Play
             </button>
