@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import requests from "../api/requests";
 import "./Banner.css";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleInfo, faPlay } from "@fortawesome/free-solid-svg-icons";
+
 export default function Banner() {
   const [movie, setMovie] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
@@ -55,9 +58,11 @@ export default function Banner() {
               className="banner__button play"
               onClick={() => setIsClicked(true)}
             >
-              Play
+              <FontAwesomeIcon icon={faPlay} className='fontIcon' /> Play
             </button>
-            <button className="banner__button info">More Information</button>
+            <button className="banner__button info">
+              <FontAwesomeIcon icon={faCircleInfo} className='fontIcon' /> More Information
+            </button>
           </div>
 
           <h1 className="banner__description">

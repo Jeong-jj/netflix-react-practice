@@ -69,6 +69,10 @@
   display: flex;
   flex-direction: row;
 }
+
+/* 새로 추가 */
+.banner__buttons button .fontIcon {padding-right: 7px;}
+
 .banner__button {
   display: flex;
   flex-direction: row;
