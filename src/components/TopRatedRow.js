@@ -40,7 +40,7 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={10}
-        loop={true} // loop 기능을 사용할 것인지
+        loop={false} // loop 기능을 사용할 것인지
         breakpoints={{
           1378: {
             slidesPerView: 6, // 한번에 보이는 슬라이드 개수
@@ -63,12 +63,13 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
         // pagination={{ clickable: true }} // 페이지 버튼
       >
         <div id={id} className="row__posters">
-          {movies.map((movie) => (
+          {movies.map((movie, index) => (
             <SwiperSlide 
               key={movie.id}
             >
+              <p className="poster__rank">{index + 1}</p>
               <img
-                className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                className={`row__poster ${isLargeRow && "row__posterLarge"} top__poster`}
                 src={`https://image.tmdb.org/t/p/original/${
                   isLargeRow ? movie.poster_path : movie.backdrop_path
                 } `}

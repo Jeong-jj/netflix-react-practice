@@ -1,6 +1,6 @@
 .row {
   margin-left: 20px;
-  padding: 20px 0 50px;
+  padding: 20px 0 30px;
   color: white;
 }
 h2 {
@@ -37,9 +37,21 @@ h2 {
   transform: scale(1.1);
   opacity: 1;
 }
+
+/* 새로 추가 */
 .poster__title {
   font-size: 15px;
 }
+.swiper {position: relative;}
+.poster__rank {
+  font-size: 60px;
+  font-weight: bold;
+
+  position: absolute;
+  left: 8px; bottom: 17px;
+  z-index: 999;
+}
+.top__poster {padding-bottom: 20px;}
 
 @media screen and (min-width: 1200px) {
   .row__poster {
@@ -56,8 +68,13 @@ h2 {
   .row__posterLarge {
     max-height: 280px;
   }
+
+  /* 새로 추가 */
   .poster__title {
     display: none;
+  }
+  .poster__rank {
+    font-size: 15px;
   }
 }
 

@@ -75,7 +75,6 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
                 alt={movie.name}
                 onClick={() => handleClick(movie)}
               />
-              <h3 className="poster__title">{movie.title ? movie.title : movie.name}</h3>
             </SwiperSlide>
           ))}
         </div>
