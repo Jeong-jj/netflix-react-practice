@@ -1,8 +1,10 @@
 .row {
   margin-left: 20px;
+  padding: 20px 0 50px;
   color: white;
 }
 h2 {
+  font-size: 28px;
   padding-left: 20px;
 }
 
@@ -21,6 +23,7 @@ h2 {
   width: 100%;
   max-height: 144px;
   margin-right: 10px;
+  padding: 10px 0;
   transition: transform 450ms;
   border-radius: 4px;
 }
@@ -33,6 +36,9 @@ h2 {
 .row__posterLarge:hover {
   transform: scale(1.1);
   opacity: 1;
+}
+.poster__title {
+  font-size: 15px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -50,6 +56,9 @@ h2 {
   .row__posterLarge {
     max-height: 280px;
   }
+  .poster__title {
+    display: none;
+  }
 }
 
 
@@ -57,9 +66,11 @@ h2 {
 .swiper-pagination {
   text-align: right !important;
 
-  /* 개인적인 추가 내용 */
+  /* 추가 내용 */
   display: flex;
   justify-content: center;
+
+  margin-top: 20px;
 }
 
 .swiper-pagination-bullet {

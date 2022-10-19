@@ -29,7 +29,6 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
     fetchMovieData();
   }, [fetchUrl]);
 
-
   const handleClick = (movie) => {
     setModalOpen(true);
     setMovieSelected(movie);  // 클릭한 영화 정보를 state에 담아줌
@@ -62,14 +61,13 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
           },
         }}
         navigation  // arrow 버튼 사용 유무 
-        pagination={{ clickable: true }} // 페이지 버튼 보이게 할지 
+        // pagination={{ clickable: true }} // 페이지 버튼
       >
         <div id={id} className="row__posters">
           {movies.map((movie) => (
             <SwiperSlide>
               <img
                 key={movie.id}
-                style={{ padding: "25px 0" }}
                 className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                 src={`https://image.tmdb.org/t/p/original/${
                   isLargeRow ? movie.poster_path : movie.backdrop_path
@@ -77,6 +75,7 @@ export default function Row({ isLargeRow, title, id, fetchUrl }) {
                 alt={movie.name}
                 onClick={() => handleClick(movie)}
               />
+              <h3 className="poster__title">{movie.title}</h3>
             </SwiperSlide>
           ))}
         </div>
