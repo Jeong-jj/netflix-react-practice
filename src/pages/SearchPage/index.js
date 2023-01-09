@@ -5,7 +5,6 @@ import { useDebounce } from "../../hooks/useDebounce";
 import "./SearchPage.css";
 
 export default function SearchPage() {
-
   const navigate = useNavigate();
 
   const [searchResults, setSearchResults] = useState([]);

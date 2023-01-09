@@ -39,13 +39,13 @@ export default function Banner() {
   // video 유무에 따라 play버튼 결과 달리 보이기
   const checkVideo = () => {
     if (movie.videos.results.length === 0) {
-      alert("예고편이 존재하지 않습니다.")
+      alert("예고편이 존재하지 않습니다.");
     } else {
-      setIsClicked(true)
+      setIsClicked(true);
     }
-  }
+  };
 
-  console.log('movie',movie);  // 확인용
+  // console.log('movie',movie);  // 확인용
 
   if (!isClicked) {
     return (
@@ -67,10 +67,11 @@ export default function Banner() {
               className="banner__button play"
               onClick={() => checkVideo()}
             >
-              <FontAwesomeIcon icon={faPlay} className='fontIcon' /> Play
+              <FontAwesomeIcon icon={faPlay} className="fontIcon" /> Play
             </button>
             <button className="banner__button info">
-              <FontAwesomeIcon icon={faCircleInfo} className='fontIcon' /> More Information
+              <FontAwesomeIcon icon={faCircleInfo} className="fontIcon" /> More
+              Information
             </button>
           </div>
 
@@ -85,10 +86,7 @@ export default function Banner() {
     return (
       <Container>
         <HomeContainer>
-          <button
-            className="videoComeback"
-            onClick={() => setIsClicked(false)}
-          >
+          <button className="videoComeback" onClick={() => setIsClicked(false)}>
             Back
           </button>
 
