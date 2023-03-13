@@ -1,71 +1,53 @@
-# Getting Started with Create React App
+# openAPI를 활용한 Netflix 클론 코딩
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📃 개요
 
-## Available Scripts
+[TMDB](https://www.themoviedb.org/)의 open API를 활용하여 데이터를 가져와 Netflix사이트를 그려내도록 만들었습니다.
 
-In the project directory, you can run:
+<br/>
 
-### `npm start`
+## 📢 구현 사항
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 배너별로 필요한 database를 가져와 map메소드를 통해 자동적으로 리스트를 구성합니다.
+  - 메인 배너를 제외한 섹션 별 배너는 swipe기능이 제공됩니다.
+- 메인 배너의 `Play`버튼 클릭시, 예고편 정보가 있을 경우 유튜브 폼을 통해 예고편 영상을 보여주도록 합니다.
+  - 예고편 재생시 전체화면으로 재생되며, 우측 하단의 `BACK`버튼 클릭시 메인 페이지로 돌아옵니다.
+- 각 섹션별 배너의 영화 클릭시 해당 영화의 상세 정보를 모달을 통해 띄워줍니다.
+- 검색 키워드에 맞는 영화 목록을 화면에 출력합니다.
+  - 검색된 영화 클릭시 해당 포스터가 전체화면으로 띄워집니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br/>
 
-### `npm test`
+## 👀 사이트 미리보기
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. 메인 한눈에 보기
 
-### `npm run build`
+![netflix-react-practice](https://user-images.githubusercontent.com/96231175/224706665-54f24bdb-3787-4c5f-aeb9-097d0b9d8ccc.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. 메인 배너 `Play`버튼 클릭시
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![preview-video](https://user-images.githubusercontent.com/96231175/224706683-8122e2b5-8aa8-4ae8-97a6-254a9e7ea588.jpg)
 
-### `npm run eject`
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. 영화정보 상세보기
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![modal](https://user-images.githubusercontent.com/96231175/224706688-f783c5d2-f7f0-4e80-a161-58069fe53ad5.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4. 키워드 검색 화면
 
-## Learn More
+![search](https://user-images.githubusercontent.com/96231175/224706686-e7382d64-390b-4016-906a-0c190256630f.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚙ 사용 스택
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# react-netflix-app-18v
+- React
+- axios
+- styled-components
+- swiper
+- react-fontawesome
